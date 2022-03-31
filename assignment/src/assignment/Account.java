@@ -1,30 +1,38 @@
 package assignment;
 
+enum TYPE{
+	FD,SB;
+}
 public class Account {
+	private static int accountCounter = 100000;
+	
+	private int accountNumber;
 	private String openingDate;
 	private TYPE type;
 	private double balance;
-	private Object accountNumber;
-	private Customer customer;
+	private int id;
 	
-
-
-	public int getAccountNumber() {
-		return accountNumber;
-	}
-	
-	public Account(String openingDate, TYPE type, double balance, Customer customer) {
-		super();
+	//constructor
+	public Account(int id, String openingDate, double balance) {
+		this.accountNumber = generateNewAccountNumber();
 		this.openingDate = openingDate;
-		this.type = type;
+		Object TYPE;
+		this.type = TYPE.SB;
 		this.balance = balance;
-		this.customer = customer;
-		this.accountNumber = getAccountNumber();	
+		this.id = id;
+	}
+	private int generateNewAccountNumber() {
+		return ++accountCounter;
+	}
+	public String getDetailsAsString() {
+		String res = new String();
+		res += "Account Number : " + accountNumber + ", ";
+		res += "Customer ID : " + id + ", ";
+		res += "Account Type : " + type + ", ";
+		res += "Account Creation Date : " + openingDate + ", ";
+		res += "Account Balance : " + balance + ".";
+		
+		return res;
 	}
 	
-	@Override
-	public String toString() {
-		String accountInfo = String.format(null, null); 
-		return accountInfo;
-	}
 }
