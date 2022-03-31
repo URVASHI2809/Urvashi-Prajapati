@@ -19,16 +19,4 @@ public class Customer {
 	private int generateId() {
 		return counter++;
 	}	
-		public String address() {
-			return address;
-	}
-		public String name() {
-			return name;
-	}
-		public String phoneNumber() {
-			return phoneNumber;
-	}
-		public String email() {
-			return email;
-	}
 }

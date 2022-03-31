@@ -1,7 +1,6 @@
-package com.rakuten.map;
 
 
-enum STATUS {
+	enum STATUS {
 		NEW, DAMAGED, RETURN
 	}
 	public class Book {
@@ -34,10 +33,9 @@ enum STATUS {
 			return price;
 		}
 		
-		public void setPrice(float price) throws InvalidPriceException{
-			System.out.println("setprice");
+		public void setPrice(float price) {
 			if(price <= 0) {
-				throw new InvalidPriceException("Price > 0");
+				throw new IllegalArgumentException("Price > 0");
 			}
 			this.price = price;
 		}
