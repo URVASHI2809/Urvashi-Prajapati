@@ -15,11 +15,10 @@ public class Shop {
 	}
 
 	private static void assignment() {
-		// TODO Auto-generated method stub
 		Book []shelf = new Book[10];
 		Random rand = new Random();
 		List<Book> listOfBooks = new ArrayList<Book>();
-		// TODO Auto-generated method stub
+		
 		for(int i=0; i<10; i++) {
 			Book ib = new Book();
 			ib.setPrice(rand.nextFloat(70, 100));
@@ -35,14 +34,13 @@ public class Shop {
 		listOfBooks.sort((book1, book2) -> (int) book1.getPrice() - (int) book2.getPrice());
 		listOfBooks.forEach((Book book) -> System.out.println(book.getPrice()) );
 		
-		
 		}
 		
 	private static void createBooks() {
 		Book []shelf = new Book[10];
 		Random rand = new Random();
 		List<Book> listOfBooks = new ArrayList<Book>();
-		// TODO Auto-generated method stub
+		
 		for(int i=0; i<10; i++) {
 			Book ib = new Book();
 			ib.setPrice(rand.nextFloat(70, 100));
