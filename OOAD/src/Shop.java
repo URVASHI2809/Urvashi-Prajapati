@@ -6,12 +6,10 @@ public class Shop {
 	public static void main(String[] args) {
 		Book b1 = new Book();
 		b1.setPrice(99);
-		//System.out.println(b1.getPrice());
-		
+	
 		createBooks();
 		System.out.println("Assignment 01 :- ");
 		assignment();
-		
 	}
 
 	private static void assignment() {
